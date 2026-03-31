@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>OmniBrain</title></head>
+<body>
+<h1>OmniBrain GOD LEVEL</h1>
+<input id="q"/><button onclick="ask()">Ask</button>
+<pre id="res"></pre>
+<script>
+async function ask(){
+ let q=document.getElementById("q").value;
+ let res=await fetch("/ask?query="+q,{method:"POST"});
+ let data=await res.json();
+ document.getElementById("res").innerText=JSON.stringify(data,null,2);
+}
+</script>
+</body>
+</html>

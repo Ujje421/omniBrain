@@ -1,9 +1,12 @@
 from fastapi import FastAPI
-from brain import process_query
+from brain import run_agent
 
-app = FastAPI(title="OmniBrain API")
+app = FastAPI(title="OmniBrain GOD LEVEL")
+
+@app.get("/")
+def home():
+    return {"status": "running"}
 
 @app.post("/ask")
 async def ask(query: str):
-    result = process_query(query)
-    return {"response": result}
+    return {"response": run_agent(query)}
