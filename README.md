@@ -1,4 +1,4 @@
-# OmniBrain GOD LEVEL
+# OmniBrain
 
 ## Features
 - Multi-agent AI router
